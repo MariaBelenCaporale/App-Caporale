@@ -4,13 +4,14 @@ import { theme } from '../../constants/theme';
 
 export const styles = StyleSheet.create({
   container: {
+    backgroundColor: theme.colors.secondary,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 60,
     paddingVertical: 20,
+    height: '100%',
   },
   title: {
-    fontSize: 16,
+    fontSize: 25,
     fontWeight: 'bold',
     marginBottom: 10,
   },
@@ -18,12 +19,12 @@ export const styles = StyleSheet.create({
     paddingVertical: 20,
   },
   detailMessage: {
-    fontSize: 14,
+    fontSize: 20,
     color: theme.colors.black,
   },
   selectedEvent: {
-    fontSize: 14,
-    color: '#212121',
+    fontSize: 18,
+    color: theme.colors.primary,
     fontWeight: 'bold',
     paddingVertical: 10,
     textAlign: 'center',

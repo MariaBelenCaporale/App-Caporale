@@ -8,11 +8,12 @@ export const styles = StyleSheet.create({
     marginTop: 55,
     alignItems: 'center',
     justifyContent: 'space-around',
+    backgroundColor: theme.colors.primary,
   },
   input: {
     width: '80%',
     borderBottomWidth: 1,
-    borderBottomColor: theme.colors.black,
+    borderBottomColor: theme.colors.primary,
     color: theme.colors.black,
   },
 });

@@ -41,7 +41,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Input
-        buttonColor="#ECE1D2"
+        buttonColor="#E02F05"
         buttonTitle="Add"
         onChangeText={(text) => setText(text)}
         onHandlerButton={onAddEvent}
