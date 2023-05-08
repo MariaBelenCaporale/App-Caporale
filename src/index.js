@@ -1,7 +1,9 @@
+import { useFonts } from 'expo-font';
 import { useState } from 'react';
-import { View } from 'react-native';
+import { ActivityIndicator, View } from 'react-native';
 
 import { Events, Input, CustomModal } from './components/index';
+import { theme } from './constants/theme';
 import { styles } from './styles';
 
 export default function App() {
@@ -9,6 +11,19 @@ export default function App() {
   const [events, setEvents] = useState([]);
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
+
+  const [loaded] = useFonts({
+    'Quicksand-Regular': require('../assets/Fonts/Quicksand-Regular.ttf'),
+    'Quicksand-Light': require('../assets/Fonts/Quicksand-Light.ttf'),
+    'Quicksand-Medium': require('../assets/Fonts/Quicksand-Medium.ttf'),
+    'Quicksand-Bold': require('../assets/Fonts/Quicksand-Bold.ttf'),
+    'Quicksand-SemiBold': require('../assets/Fonts/Quicksand-SemiBold.ttf'),
+  });
+
+  //Si no cargan las fuentes se muestra el Activity Indicator
+  if (!loaded) {
+    return <ActivityIndicator size="large" color={theme.colors.black} />;
+  }
 
   const onAddEvent = () => {
     if (text.length === 0) return;
