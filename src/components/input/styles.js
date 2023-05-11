@@ -1,14 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { theme } from '../../constants';
-=======
-import { theme } from '../../constants/theme';
->>>>>>> f0985db6932a683aeaf005d6ab114dac0aebbd6b
-=======
-import { theme } from '../../constants/theme';
->>>>>>> f0985db6932a683aeaf005d6ab114dac0aebbd6b
 
 export const styles = StyleSheet.create({
   inputContainer: {
@@ -16,14 +8,6 @@ export const styles = StyleSheet.create({
     marginTop: 55,
     alignItems: 'center',
     justifyContent: 'space-around',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    backgroundColor: theme.colors.primary,
->>>>>>> f0985db6932a683aeaf005d6ab114dac0aebbd6b
-=======
-    backgroundColor: theme.colors.primary,
->>>>>>> f0985db6932a683aeaf005d6ab114dac0aebbd6b
   },
   input: {
     width: '80%',
