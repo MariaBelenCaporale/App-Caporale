@@ -1,8 +1,8 @@
 import { NavigationContainer } from '@react-navigation/native';
 
-import { MainNavigator } from './main';
+import MainNavigator from './main';
 
-const Navigator = () => {
+const Navigation = () => {
   return (
     <NavigationContainer>
       <MainNavigator />
@@ -10,4 +10,4 @@ const Navigator = () => {
   );
 };
 
-export default Navigator;
+export default Navigation;

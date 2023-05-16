@@ -13,7 +13,7 @@ import { styles } from './styles';
 import { Card, Header, NumberContainer } from '../../components/index';
 import { theme } from '../../constants';
 
-const PantallaUno = ({ onIngresar }) => {
+const PantallaUno = ({ onIngresar, navigation }) => {
   const [numberOption, setNumberOption] = useState('');
 
   const [confirmed, setConfirmed] = useState(false);
@@ -53,6 +53,9 @@ const PantallaUno = ({ onIngresar }) => {
       <View style={styles.container}>
         <Header title="Bienvenid@" />
         <Text style={styles.title}>Pantalla uno, ingresar datos</Text>
+
+        <Button title="clickeame" onPress={() => navigation.navigate('PantallaDos')} />
+
         <Card style={styles.inputContainer}>
           <Text style={styles.label}>Ingresar edad</Text>
           <TextInput

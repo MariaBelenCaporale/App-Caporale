@@ -3,15 +3,16 @@ import { useState } from 'react';
 import { View, ActivityIndicator } from 'react-native';
 
 import { theme } from './constants';
-import { PantallaUno, PantallaInicio } from './screens/index';
+import Navigator from './navigation';
 import { styles } from './styles';
+
 export default function App() {
   const [userNumber, setUserNumber] = useState(null);
 
   const onIngresar = (number) => {
     setUserNumber(number);
   };
-  const Content = () => (userNumber ? <PantallaInicio /> : <PantallaUno onIngresar={onIngresar} />);
+  // const Content = () => (userNumber ? <PantallaInicio /> : <PantallaUno onIngresar={onIngresar} />);
 
   const [loaded] = useFonts({
     'Quicksand-Regular': require('../assets/Fonts/Quicksand-Regular.ttf'),
@@ -28,7 +29,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Content />
+      <Navigator />
     </View>
   );
 }
