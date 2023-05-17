@@ -7,11 +7,11 @@ import Navigator from './navigation';
 import { styles } from './styles';
 
 export default function App() {
-  const [userNumber, setUserNumber] = useState(null);
+  // const [userNumber, setUserNumber] = useState(null);
 
-  const onIngresar = (number) => {
-    setUserNumber(number);
-  };
+  // const onIngresar = (number) => {
+  //   setUserNumber(number);
+  // };
   // const Content = () => (userNumber ? <PantallaInicio /> : <PantallaUno onIngresar={onIngresar} />);
 
   const [loaded] = useFonts({

@@ -5,7 +5,7 @@ import { theme } from '../../constants';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.colors.black,
+    backgroundColor: theme.colors.primary,
     marginHorizontal: 20,
   },
 });

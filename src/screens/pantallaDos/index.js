@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { View, Text, Button, TextInput, FlatList, TouchableOpacity, Modal } from 'react-native';
+import { View } from 'react-native';
 
 import { styles } from './styles';
 import { Events, Input, CustomModal, Header } from '../../components/index';
+import { theme } from '../../constants';
 
 const PantallaInicio = () => {
   const [text, setText] = useState('');
@@ -41,11 +42,11 @@ const PantallaInicio = () => {
     <View style={styles.container}>
       <Header title="Agregar tareas" />
       <Input
-        buttonColor="#E02F05"
+        buttonColor={theme.colors.secondary}
         buttonTitle="Add"
         onChangeText={(text) => setText(text)}
         onHandlerButton={onAddEvent}
-        placeholder="Agregar tarea"
+        placeholder="Ingrese tarea"
         value={text}
       />
 

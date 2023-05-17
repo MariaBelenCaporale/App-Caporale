@@ -6,7 +6,7 @@ import { styles } from './styles';
 const PantallaStart = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text>Pantalla Start</Text>
+      <Text style={styles.welcome}>¡Bienvenid@!</Text>
       <Button title="Ingresar" onPress={() => navigation.navigate('PantallaTres')} />
     </View>
   );

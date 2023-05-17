@@ -21,13 +21,6 @@ export const styles = StyleSheet.create({
     marginHorizontal: 20,
   },
 
-  label: {
-    fontSize: 18,
-    color: theme.colors.primary,
-    paddingVertical: 5,
-    textAlign: 'center',
-  },
-
   input: {
     width: '100%',
     borderBottomColor: theme.colors.primary,
@@ -36,6 +29,7 @@ export const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     paddingVertical: 10,
+    color: theme.colors.primary,
   },
 
   buttonContainer: {

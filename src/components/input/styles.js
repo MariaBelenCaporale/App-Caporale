@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
   input: {
     width: '80%',
     borderBottomWidth: 1,
-    borderBottomColor: theme.colors.primary,
+    borderBottomColor: theme.colors.secondary,
     color: theme.colors.black,
   },
 });

@@ -1,8 +1,7 @@
 import React from 'react';
-import { View, FlatList } from 'react-native';
+import { FlatList } from 'react-native';
 
 import EventItem from './item';
-import { styles } from './styles';
 
 const Events = ({ events, onSelectItem }) => {
   const renderItem = ({ item }) => <EventItem item={item} onSelectItem={onSelectItem} />;

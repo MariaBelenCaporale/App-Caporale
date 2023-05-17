@@ -5,20 +5,25 @@ import { theme } from '../../constants';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: theme.colors.black,
+    justifyContent: 'flex-start',
+    backgroundColor: theme.colors.secondary,
   },
-  subtitleBuscar: {
+  welcome: {
+    color: theme.colors.primary,
+    fontFamily: 'Quicksand-Bold',
+    fontSize: 30,
+    padding: 20,
+  },
+  subtitle: {
     color: theme.colors.primary,
     fontFamily: 'Quicksand-SemiBold',
     fontSize: 20,
-    padding: 20,
     textAlign: 'center',
   },
   containerButton: {
-    alignItems: 'space-around',
-    height: 120,
-    justifyContent: 'center',
+    height: 90,
+    alignContent: 'center',
+    marginTop: 20,
   },
 });
