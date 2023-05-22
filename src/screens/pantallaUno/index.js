@@ -1,17 +1,8 @@
-import React, { useState } from 'react';
-import {
-  View,
-  Text,
-  Button,
-  TextInput,
-  TouchableWithoutFeedback,
-  Keyboard,
-  Alert,
-} from 'react-native';
+import React from 'react';
+import { View, Text, Button, TextInput, TouchableWithoutFeedback, Keyboard } from 'react-native';
 
 import { styles } from './styles';
-import { Card, Header, NumberContainer } from '../../components/index';
-import { theme } from '../../constants';
+import { Card, Header } from '../../components/index';
 
 const PantallaUno = ({ navigation }) => {
   return (
