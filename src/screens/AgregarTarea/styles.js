@@ -6,6 +6,8 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: theme.colors.primary,
-    marginHorizontal: 20,
+    justifyContent: 'space-around',
+    height: 130,
+    paddingHorizontal: 20,
   },
 });

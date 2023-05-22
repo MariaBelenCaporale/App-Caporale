@@ -67,12 +67,12 @@ y comenzá a crear tareas"
             </View>
 
             <View style={styles.buttonContainer}>
+              <Button title="Agregar" color="#FCCE2A" onPress={() => navigation.navigate('Home')} />
               <Button
-                title="Agregar"
+                title="Ahora no"
                 color="#FCCE2A"
-                onPress={() => navigation.navigate('AgregarAmigo')}
+                onPress={() => navigation.navigate('Home')}
               />
-              <Button title="Ahora no" color="#FCCE2A" onPress={() => navigation.navigate('')} />
             </View>
           </View>
         </Modal>

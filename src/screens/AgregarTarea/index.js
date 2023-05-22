@@ -5,7 +5,7 @@ import { styles } from './styles';
 import { Events, Input, CustomModal, Header } from '../../components/index';
 import { theme } from '../../constants';
 
-const PantallaInicio = () => {
+const AgregarTarea = () => {
   const [text, setText] = useState('');
   const [events, setEvents] = useState([]);
   const [modalVisible, setModalVisible] = useState(false);
@@ -62,4 +62,4 @@ const PantallaInicio = () => {
   );
 };
 
-export default PantallaInicio;
+export default AgregarTarea;

@@ -6,7 +6,7 @@ const Stack = createNativeStackNavigator();
 
 const RegistroNavigator = () => {
   return (
-    <Stack.Navigator initialRouteName="Bienvenida">
+    <Stack.Navigator initialRouteName="Registro">
       <Stack.Screen name="Registro" component={Registro} />
     </Stack.Navigator>
   );
