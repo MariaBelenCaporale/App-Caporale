@@ -2,10 +2,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import {
   PantallaUno,
-  PantallaTres,
+  AgregarAmigo,
   PantallaInicio,
-  PantallaStart,
+  Bienvenida,
   PantallaAmigo,
+  Registro,
 } from '../../screens';
 
 const Stack = createNativeStackNavigator();
@@ -13,12 +14,13 @@ const Stack = createNativeStackNavigator();
 const MainNavigator = () => {
   return (
     <Stack.Navigator initialRouteName="PantallaStart">
-      <Stack.Screen name="PantallaStart" component={PantallaStart} />
+      <Stack.Screen name="Bienvenid@" component={Bienvenida} />
       <Stack.Screen name="PantallaUno" component={PantallaUno} />
       <Stack.Screen name="PantallaAmigo" component={PantallaAmigo} />
 
+      <Stack.Screen name="Registro" component={Registro} />
       <Stack.Screen name="PantallaInicio" component={PantallaInicio} />
-      <Stack.Screen name="PantallaTres" component={PantallaTres} />
+      <Stack.Screen name="AgregarAmigo" component={AgregarAmigo} />
     </Stack.Navigator>
   );
 };

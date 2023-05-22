@@ -7,17 +7,13 @@ export const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'flex-start',
-    backgroundColor: theme.colors.secondary,
+    backgroundColor: theme.colors.primary,
   },
   welcome: {
-    color: theme.colors.primary,
+    color: theme.colors.black,
     fontFamily: 'Quicksand-Bold',
-    fontSize: 30,
+    backgroundColor: theme.colors.primary,
+    fontSize: 40,
     padding: 20,
-  },
-  subtitle: {
-    color: theme.colors.primary,
-    fontFamily: 'Quicksand-SemiBold',
-    fontSize: 20,
   },
 });

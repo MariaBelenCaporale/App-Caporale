@@ -3,13 +3,14 @@ import { View, Text, Button } from 'react-native';
 
 import { styles } from './styles';
 
-const PantallaStart = ({ navigation }) => {
+const Bienvenida = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.welcome}>¡Bienvenid@!</Text>
+      <Text style={styles.welcome}>Bienvenid@</Text>
       <Button title="Ingresar" onPress={() => navigation.navigate('PantallaTres')} />
+      <Button title="Registrate" onPress={() => navigation.navigate('Registro')} />
     </View>
   );
 };
 
-export default PantallaStart;
+export default Bienvenida;
