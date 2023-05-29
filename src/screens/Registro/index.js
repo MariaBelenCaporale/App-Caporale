@@ -9,11 +9,17 @@ import {
   Modal,
   Image,
 } from 'react-native';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { styles } from './styles';
 import { Card, Header } from '../../components/index';
+import { setName } from '../../redux/actions/actions';
 
 const Registro = ({ navigation }) => {
+  const { name } = useSelector((state) => state.userReducer);
+  const dispatch = useDispatch();
+
+  // const [name, setName] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
@@ -38,6 +44,7 @@ y comenzá a crear tareas"
             placeholder="Delfi"
             style={styles.input}
             autoCorrect={false}
+            onChangeText={(value) => dispatch(setName(value))}
             minLength={6}
             blurOnSubmit
           />
@@ -52,7 +59,8 @@ y comenzá a crear tareas"
           }}>
           <View style={styles.containerModal}>
             <View style={styles.modalView}>
-              <Text style={styles.textoModal}>¡Tu cuenta ha sido creada!</Text>
+              <Text style={styles.textoModal}>¡Felicidades {name}!</Text>
+              <Text style={styles.parrafoModal}>Tu cuenta ha sido creada con éxito</Text>
             </View>
 
             <View style={styles.contieneImg}>
@@ -67,10 +75,10 @@ y comenzá a crear tareas"
             </View>
 
             <View style={styles.buttonContainer}>
-              <Button title="Agregar" color="#FCCE2A" onPress={() => navigation.navigate('Home')} />
+              <Button title="Agregar" color="#1E1E1E" onPress={() => navigation.navigate('Home')} />
               <Button
                 title="Ahora no"
-                color="#FCCE2A"
+                color="#1E1E1E"
                 onPress={() => navigation.navigate('Home')}
               />
             </View>

@@ -1,9 +1,11 @@
 import { useFonts } from 'expo-font';
 import { useState } from 'react';
 import { View, ActivityIndicator } from 'react-native';
+import { Provider } from 'react-redux';
 
 import { theme } from './constants';
 import Navigator from './navigation';
+import { Store } from './redux/store/store';
 import { styles } from './styles';
 
 export default function App() {
@@ -28,8 +30,10 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      <Navigator />
-    </View>
+    <Provider store={Store}>
+      <View style={styles.container}>
+        <Navigator />
+      </View>
+    </Provider>
   );
 }

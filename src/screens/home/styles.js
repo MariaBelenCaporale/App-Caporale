@@ -6,8 +6,17 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: theme.colors.primary,
-    justifyContent: 'space-around',
     height: 130,
     paddingHorizontal: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  textoEnter: {
+    color: theme.colors.black,
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: 30,
+    fontFamily: 'Quicksand-Bold',
   },
 });

@@ -35,24 +35,30 @@ export const styles = StyleSheet.create({
 
   containerModal: {
     flex: 1,
-    backgroundColor: theme.colors.black,
+    backgroundColor: theme.colors.rosa,
     alignItems: 'center',
     justifyContent: 'space-around',
   },
 
   textoModal: {
     marginHorizontal: 30,
-    color: theme.colors.primary,
+    color: theme.colors.black,
     fontFamily: 'Quicksand-Bold',
     fontSize: 30,
     textAlign: 'center',
   },
 
+  parrafoModal: {
+    color: theme.colors.black,
+    fontSize: 20,
+    textAlign: 'center',
+  },
+
   buttonContainer: {
     width: '80%',
-    flexDirection: 'row',
     color: theme.colors.black,
     justifyContent: 'space-around',
+    gap: 10,
   },
 
   contieneAgregar: {
@@ -62,9 +68,9 @@ export const styles = StyleSheet.create({
   },
 
   textoPregunta: {
-    color: theme.colors.primary,
+    color: theme.colors.black,
     fontFamily: 'Quicksand-Regular',
-    fontSize: 20,
+    fontSize: 25,
     textAlign: 'center',
     justifyContent: 'center',
     width: '100%',
