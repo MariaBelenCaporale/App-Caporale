@@ -1,21 +1,13 @@
 import { useFonts } from 'expo-font';
-import { useState } from 'react';
 import { View, ActivityIndicator } from 'react-native';
 import { Provider } from 'react-redux';
 
 import { theme } from './constants';
 import Navigator from './navigation';
-import { Store } from './redux/store/store';
+import redux from './redux';
 import { styles } from './styles';
 
 export default function App() {
-  // const [userNumber, setUserNumber] = useState(null);
-
-  // const onIngresar = (number) => {
-  //   setUserNumber(number);
-  // };
-  // const Content = () => (userNumber ? <PantallaInicio /> : <PantallaUno onIngresar={onIngresar} />);
-
   const [loaded] = useFonts({
     'Quicksand-Regular': require('../assets/Fonts/Quicksand-Regular.ttf'),
     'Quicksand-Light': require('../assets/Fonts/Quicksand-Light.ttf'),
@@ -30,7 +22,7 @@ export default function App() {
   }
 
   return (
-    <Provider store={Store}>
+    <Provider store={redux}>
       <View style={styles.container}>
         <Navigator />
       </View>

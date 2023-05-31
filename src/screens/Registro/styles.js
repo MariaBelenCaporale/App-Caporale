@@ -14,8 +14,15 @@ export const styles = StyleSheet.create({
   inputContainer: {
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
-    marginHorizontal: 20,
+    marginHorizontal: 30,
     backgroundColor: theme.colors.primary,
+  },
+
+  label: {
+    fontFamily: 'Quicksand-Regular',
+    fontSize: 15,
+    paddingBottom: 3,
+    paddingTop: 20,
   },
   input: {
     width: '100%',
@@ -23,7 +30,7 @@ export const styles = StyleSheet.create({
     borderBottomWidth: 1,
     paddingVertical: 15,
     minWidth: 70,
-    fontSize: 20,
+    fontSize: 15,
     color: theme.colors.black,
   },
 
@@ -50,6 +57,13 @@ export const styles = StyleSheet.create({
 
   parrafoModal: {
     color: theme.colors.black,
+    fontSize: 20,
+    textAlign: 'center',
+  },
+
+  linkText: {
+    color: theme.colors.black,
+    fontFamily: 'Quicksand-Regular',
     fontSize: 20,
     textAlign: 'center',
   },

@@ -7,8 +7,8 @@ const Bienvenida = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.welcome}>Bienvenid@</Text>
-      <Button title="Ingresar" onPress={() => navigation.navigate('Home')} />
-      <Button title="Registrate" onPress={() => navigation.navigate('Registro')} />
+      {/* <Button title="Ingresar" onPress={() => navigation.navigate('Home')} />
+      <Button title="Registrate" onPress={() => navigation.navigate('Registro')} /> */}
     </View>
   );
 };
