@@ -1,7 +1,7 @@
-import { FIREBASE_AUTH_SIGN_UP_URL } from '../../constants/firebase';
+import { FIREBASE_AUTH_SIGN_IN_URL, FIREBASE_AUTH_SIGN_UP_URL } from '../../constants/firebase';
 import { registroTypes } from '../types';
 
-const { SIGN_UP } = registroTypes;
+const { SIGN_IN, SIGN_UP } = registroTypes;
 
 export const signUp = ({ email, password }) => {
   return async (dispatch) => {
@@ -35,5 +35,5 @@ export const signUp = ({ email, password }) => {
 };
 
 export const signIn = ({ email, password }) => {
-  console.log('signIn');
+  console.log('singIn');
 };
