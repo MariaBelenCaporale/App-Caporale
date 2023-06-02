@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   View,
   Text,
@@ -11,11 +11,11 @@ import {
 import { useDispatch } from 'react-redux';
 
 import { styles } from './styles';
-import { Card, Header } from '../../components/index';
+import { Header } from '../../components/index';
 import { theme } from '../../constants';
 import { signIn, signUp } from '../../redux/actions';
 
-const Registro = ({ navigation }) => {
+const Registro = () => {
   const dispatch = useDispatch();
   const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState('');
@@ -40,7 +40,7 @@ const Registro = ({ navigation }) => {
           text="Completá los datos
 y comenzá a crear tareas"
         />
-        <Card style={styles.inputContainer}>
+        <View style={styles.inputContainer}>
           <Text style={styles.label}>Email</Text>
           <TextInput
             placeholder="email@gmail.com"
@@ -59,10 +59,10 @@ y comenzá a crear tareas"
             secureTextEntry
             autoCapitalize="none"
             autoCorrect={false}
-            onChange={(text) => setPassword(text)}
+            onChangeText={(text) => setPassword(text)}
             value={password}
           />
-        </Card>
+        </View>
         <TouchableOpacity style={styles.link} onPress={onHandleChangeRegister}>
           <Text style={styles.linkText}>{messageText}</Text>
         </TouchableOpacity>

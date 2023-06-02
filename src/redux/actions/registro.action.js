@@ -1,4 +1,4 @@
-import { FIREBASE_AUTH_SIGN_IN_URL, FIREBASE_AUTH_SIGN_UP_URL } from '../../constants/firebase';
+import { FIREBASE_AUTH_SIGN_IN_URL, FIREBASE_AUTH_SIGN_UP_URL } from '../../constants';
 import { registroTypes } from '../types';
 
 const { SIGN_IN, SIGN_UP } = registroTypes;
@@ -23,6 +23,7 @@ export const signUp = ({ email, password }) => {
       }
 
       const data = await response.json();
+
       dispatch({
         type: SIGN_UP,
         token: data.idToken,
@@ -35,5 +36,28 @@ export const signUp = ({ email, password }) => {
 };
 
 export const signIn = ({ email, password }) => {
-  console.log('singIn');
+  return async (dispatch) => {
+    try {
+      const response = await fetch(FIREBASE_AUTH_SIGN_IN_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          password,
+          returnSecureToken: true,
+        }),
+      });
+      const data = await response.json();
+
+      dispatch({
+        type: SIGN_IN,
+        token: data.idToken,
+        userId: data.localId,
+      });
+    } catch (error) {
+      throw error;
+    }
+  };
 };
