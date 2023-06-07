@@ -19,4 +19,8 @@ export const styles = StyleSheet.create({
     fontSize: 30,
     fontFamily: 'Quicksand-Bold',
   },
+
+  containerRanking: {
+    backgroundColor: theme.colors.celeste,
+  },
 });

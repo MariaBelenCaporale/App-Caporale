@@ -16,6 +16,7 @@ export const styles = StyleSheet.create({
     alignItems: 'flex-start',
     marginHorizontal: 30,
     backgroundColor: theme.colors.primary,
+    minHeight: 340,
   },
 
   label: {
@@ -23,15 +24,6 @@ export const styles = StyleSheet.create({
     fontSize: 15,
     paddingBottom: 3,
     paddingTop: 20,
-  },
-  input: {
-    width: '100%',
-    borderBottomColor: theme.colors.black,
-    borderBottomWidth: 1,
-    paddingVertical: 15,
-    minWidth: 70,
-    fontSize: 15,
-    color: theme.colors.black,
   },
 
   textoRef: {

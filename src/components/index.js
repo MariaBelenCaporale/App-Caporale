@@ -4,3 +4,4 @@ export { default as CustomModal } from './modal/index';
 export { default as Header } from './header/index';
 export { default as Card } from './card/index';
 // export { default as NumberContainer } from './number-container/index';
+export { default as InputForm } from './inputForm/index';
