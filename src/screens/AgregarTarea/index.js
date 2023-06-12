@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import { View } from 'react-native';
+import { View, TouchableWithoutFeedback, Keyboard, Button } from 'react-native';
 
 import { styles } from './styles';
 import { Events, Input, CustomModal, Header } from '../../components/index';
 import { theme } from '../../constants';
+import { navigateToAgregarTarea } from '../../redux/actions';
 
-const AgregarTarea = () => {
+const AgregarTarea = ({ navigation }) => {
   const [text, setText] = useState('');
   const [events, setEvents] = useState([]);
   const [modalVisible, setModalVisible] = useState(false);
@@ -39,26 +40,32 @@ const AgregarTarea = () => {
     setModalVisible(!modalVisible);
   };
   return (
-    <View style={styles.container}>
-      <Header title="Agregar tareas" />
-      <Input
-        buttonColor={theme.colors.secondary}
-        buttonTitle="Add"
-        onChangeText={(text) => setText(text)}
-        onHandlerButton={onAddEvent}
-        placeholder="Ingrese tarea"
-        value={text}
-      />
+    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+      <View style={styles.container}>
+        <Header title="Agregar tarea" />
+        <Input
+          buttonColor={theme.colors.rosa}
+          buttonTitle="Agregar"
+          onChangeText={(text) => setText(text)}
+          onHandlerButton={onAddEvent}
+          placeholder="Ingresar tarea"
+          value={text}
+        />
 
-      <Events events={events} onSelectItem={onHandlerEvent} />
-      <CustomModal
-        isVisible={modalVisible}
-        animationType="slide"
-        onCancel={onHandlerCancelModal}
-        onDelete={onHandlerDeleteEvent}
-        selectedEvent={selectedEvent}
-      />
-    </View>
+        <View>
+          <Button title="Ir a home" onPress={() => navigation.navigate('Home')} />
+        </View>
+
+        <Events events={events} onSelectItem={onHandlerEvent} />
+        <CustomModal
+          isVisible={modalVisible}
+          animationType="slide"
+          onCancel={onHandlerCancelModal}
+          onDelete={onHandlerDeleteEvent}
+          selectedEvent={selectedEvent}
+        />
+      </View>
+    </TouchableWithoutFeedback>
   );
 };
 

@@ -1,14 +1,23 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, SafeAreaView, Image } from 'react-native';
 
 import { styles } from './styles';
 
 const Header = ({ title, text }) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>{title}</Text>
-      <Text style={styles.text}>{text}</Text>
-    </View>
+    <SafeAreaView style={styles.containerSafe}>
+      <View style={styles.container}>
+        <Text style={styles.title}>{title}</Text>
+        <Image
+          source={require('../../../assets/Img/tareaColor.png')}
+          style={{
+            width: 120,
+            height: 120,
+            resizeMode: 'contain',
+          }}
+        />
+      </View>
+    </SafeAreaView>
   );
 };
 

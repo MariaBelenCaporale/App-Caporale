@@ -5,3 +5,7 @@ export { default as Header } from './header/index';
 export { default as Card } from './card/index';
 // export { default as NumberContainer } from './number-container/index';
 export { default as InputForm } from './inputForm/index';
+export { default as ImageSelector } from './image-selector';
+export { default as LocationSelector } from './location-selector';
+export { default as MapPreview } from './map-preview';
+export { default as PlaceItem } from './place-item';

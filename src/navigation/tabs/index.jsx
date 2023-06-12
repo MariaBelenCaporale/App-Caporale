@@ -14,13 +14,18 @@ const TabsNavigator = () => {
         headerShown: false,
         tabBarLabelStyle: {
           fontFamily: 'Quicksand-Regular',
-          fontSize: 12,
+          fontSize: 14,
         },
+
         tabBarStyle: {
-          backgroundColor: theme.colors.black,
+          backgroundColor: theme.colors.primary,
+          height: 60,
+          justifyContent: 'space-around',
+          paddingBottom: 5,
+          paddingTop: 5,
         },
-        tabBarActiveTintColor: theme.colors.secondary,
-        tabBarInactiveTintColor: theme.colors.primary,
+        tabBarActiveTintColor: theme.colors.black,
+        tabBarInactiveTintColor: theme.colors.black,
       }}>
       <BottomTab.Screen
         name="Home"

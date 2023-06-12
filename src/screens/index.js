@@ -5,3 +5,7 @@ export { default as Bienvenida } from './Bienvenida';
 export { default as PantallaAmigo } from './PantallaAmigo';
 export { default as Registro } from './Registro';
 export { default as Home } from './home';
+export { default as MapsScreen } from './maps';
+export { default as NewPlaceScreen } from './new-place';
+export { default as PlaceDetailScreen } from './place-detail';
+export { default as PlaceListScreen } from './place-list';

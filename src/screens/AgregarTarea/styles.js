@@ -7,7 +7,6 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: theme.colors.primary,
     justifyContent: 'space-around',
-    height: 130,
     paddingHorizontal: 20,
   },
 });

@@ -1,5 +1,5 @@
 import { useFonts } from 'expo-font';
-import { View, ActivityIndicator } from 'react-native';
+import { View, ActivityIndicator, SafeAreaView } from 'react-native';
 import { Provider } from 'react-redux';
 
 import { theme } from './constants';
@@ -22,10 +22,12 @@ export default function App() {
   }
 
   return (
-    <Provider store={redux}>
-      <View style={styles.container}>
-        <Navigator />
-      </View>
-    </Provider>
+    <SafeAreaView style={styles.containerSafe}>
+      <Provider store={redux}>
+        <View style={styles.container}>
+          <Navigator />
+        </View>
+      </Provider>
+    </SafeAreaView>
   );
 }

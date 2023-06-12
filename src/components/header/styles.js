@@ -4,23 +4,17 @@ import { theme } from '../../constants';
 
 export const styles = StyleSheet.create({
   container: {
-    justifyContent: 'flex-start',
-    alignItems: 'center',
     backgroundColor: theme.colors.primary,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    width: '100%',
+    marginTop: 50,
   },
+
   title: {
-    paddingTop: 10,
-    paddingBottom: 10,
-    fontSize: 35,
+    fontSize: 30,
     textAlign: 'center',
     color: theme.colors.black,
-    fontFamily: 'Quicksand-Regular',
-  },
-  text: {
-    fontSize: 20,
-    paddingBottom: 10,
-    color: theme.colors.black,
-    fontFamily: 'Quicksand-Regular',
-    textAlign: 'center',
+    fontFamily: 'Quicksand-Medium',
   },
 });
