@@ -4,7 +4,7 @@ import { AgregarTarea } from '../../screens';
 
 const Stack = createNativeStackNavigator();
 
-const AgregarTareaNavigator = () => {
+const AgregarTareaNavigator = ({ navigation }) => {
   return (
     <Stack.Navigator initialRouteName="AgregarTarea">
       <Stack.Screen name="AgregarTarea" component={AgregarTarea} />

@@ -7,19 +7,12 @@ import {
   Image,
   SafeAreaView,
   TouchableOpacity,
+  Button,
 } from 'react-native';
-import { useDispatch } from 'react-redux';
 
 import { styles } from './styles';
-import { navigateToAgregarTarea } from '../../redux/actions/agregarTarea.action';
 
 const Home = ({ navigation }) => {
-  const dispatch = useDispatch();
-
-  const handleAgregarTarea = () => {
-    dispatch(navigateToAgregarTarea());
-  };
-
   return (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <SafeAreaView style={styles.containerSafe}>
@@ -49,7 +42,8 @@ const Home = ({ navigation }) => {
 
           <View style={styles.containerCajas}>
             <View style={styles.contieneFilaUno}>
-              <TouchableOpacity onPress={handleAgregarTarea}>
+              <TouchableOpacity>
+                <Button title="click" onPress={() => navigation.navigate('AgregarTarea')} />
                 <View style={styles.containerTarea}>
                   <View style={styles.containerTextImgTarea}>
                     <Image
