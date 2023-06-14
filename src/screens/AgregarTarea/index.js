@@ -4,7 +4,6 @@ import { View, TouchableWithoutFeedback, Keyboard, Button } from 'react-native';
 import { styles } from './styles';
 import { Events, Input, CustomModal, Header } from '../../components/index';
 import { theme } from '../../constants';
-import { navigateToAgregarTarea } from '../../redux/actions';
 
 const AgregarTarea = ({ navigation }) => {
   const [text, setText] = useState('');

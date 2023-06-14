@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import { theme } from '../../constants';
 import { AgregarTarea, Home, Registro } from '../../screens';
-
+import NewPlace from '../../screens/new-place';
 const BottomTab = createBottomTabNavigator();
 
 const TabsNavigator = () => {
@@ -48,10 +48,10 @@ const TabsNavigator = () => {
         }}
       />
       <BottomTab.Screen
-        name="Regisro"
-        component={Registro}
+        name="Mapa"
+        component={NewPlace}
         options={{
-          tabBarLabel: 'Registro',
+          tabBarLabel: 'Mapa',
           tabBarIcon: ({ focused, color, size }) => (
             <Ionicons
               name={focused ? 'chatbubble-ellipses' : 'chatbubble-ellipses-outline'}
