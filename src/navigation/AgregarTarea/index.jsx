@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { AgregarTarea } from '../../screens';
+import AgregarTarea from '../../screens/AgregarTarea';
 
 const Stack = createNativeStackNavigator();
 

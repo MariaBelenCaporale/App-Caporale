@@ -2,8 +2,10 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import { theme } from '../../constants';
-import { AgregarTarea, Home, Registro } from '../../screens';
+import { Home } from '../../screens';
 import NewPlace from '../../screens/new-place';
+import AgregarTareaNavigator from '../AgregarTarea';
+
 const BottomTab = createBottomTabNavigator();
 
 const TabsNavigator = () => {
@@ -37,7 +39,7 @@ const TabsNavigator = () => {
           ),
         }}
       />
-      <BottomTab.Screen
+      {/* <BottomTab.Screen
         name="Tareas"
         component={AgregarTarea}
         options={{
@@ -46,8 +48,10 @@ const TabsNavigator = () => {
             <Ionicons name={focused ? 'bookmark' : 'bookmark-outline'} size={size} color={color} />
           ),
         }}
-      />
-      <BottomTab.Screen
+      /> */}
+      <BottomTab.Screen name="Tareas" component={AgregarTareaNavigator} />
+
+      {/* <BottomTab.Screen
         name="Mapa"
         component={NewPlace}
         options={{
@@ -60,7 +64,8 @@ const TabsNavigator = () => {
             />
           ),
         }}
-      />
+      /> */}
+      <BottomTab.Screen name="Mapa" component={NewPlace} />
     </BottomTab.Navigator>
   );
 };

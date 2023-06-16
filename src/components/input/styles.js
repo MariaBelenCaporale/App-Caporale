@@ -5,14 +5,16 @@ import { theme } from '../../constants';
 export const styles = StyleSheet.create({
   inputContainer: {
     flexDirection: 'row',
-    marginTop: 55,
+    marginTop: 30,
     alignItems: 'center',
-    justifyContent: 'space-around',
+    justifyContent: 'space-evenly',
   },
   input: {
-    width: '80%',
+    width: '70%',
     borderBottomWidth: 1,
     borderBottomColor: theme.colors.secondary,
     color: theme.colors.black,
+    fontFamily: 'Quicksand-Bold',
+    fontSize: 16,
   },
 });

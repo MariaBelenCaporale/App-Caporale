@@ -184,8 +184,8 @@ export const styles = StyleSheet.create({
   textoTarea: {
     fontFamily: 'Quicksand-Bold',
     fontSize: 18,
-    textAlign: 'left',
-    width: '70%',
+    textAlign: 'center',
+    width: '100%',
     paddingTop: 20,
   },
 });

@@ -7,7 +7,6 @@ import {
   Image,
   SafeAreaView,
   TouchableOpacity,
-  Button,
 } from 'react-native';
 
 import { styles } from './styles';
@@ -31,20 +30,21 @@ const Home = ({ navigation }) => {
           </View>
 
           <View style={styles.containerRanking}>
-            <View style={styles.containerTextImg}>
-              <Text style={styles.textoRanking}>Ver ranking de quehaceres</Text>
-              <Image
-                source={require('../../../assets/Img/ranking.png')}
-                style={{ width: 70, height: 70, resizeMode: 'contain' }}
-              />
-            </View>
+            <TouchableOpacity onPress={() => navigation.navigate('Rankign')}>
+              <View style={styles.containerTextImg}>
+                <Text style={styles.textoRanking}>Ver ranking de quehaceres</Text>
+                <Image
+                  source={require('../../../assets/Img/ranking.png')}
+                  style={{ width: 70, height: 70, resizeMode: 'contain' }}
+                />
+              </View>
+            </TouchableOpacity>
           </View>
 
           <View style={styles.containerCajas}>
             <View style={styles.contieneFilaUno}>
-              <TouchableOpacity>
-                <Button title="click" onPress={() => navigation.navigate('AgregarTarea')} />
-                <View style={styles.containerTarea}>
+              <View style={styles.containerTarea}>
+                <TouchableOpacity onPress={() => navigation.navigate('Tareas')}>
                   <View style={styles.containerTextImgTarea}>
                     <Image
                       source={require('../../../assets/Img/tareas.png')}
@@ -52,29 +52,33 @@ const Home = ({ navigation }) => {
                     />
                     <Text style={styles.textoTarea}>Nueva tarea</Text>
                   </View>
-                </View>
-              </TouchableOpacity>
+                </TouchableOpacity>
+              </View>
 
               <View style={styles.containerChat}>
-                <View style={styles.containerTextImgTarea}>
-                  <Image
-                    source={require('../../../assets/Img/tareas.png')}
-                    style={{ width: 70, height: 70, resizeMode: 'contain' }}
-                  />
-                  <Text style={styles.textoTarea}>Chat</Text>
-                </View>
+                <TouchableOpacity onPress={() => navigation.navigate('Chat')}>
+                  <View style={styles.containerTextImgTarea}>
+                    <Image
+                      source={require('../../../assets/Img/tareas.png')}
+                      style={{ width: 70, height: 70, resizeMode: 'contain' }}
+                    />
+                    <Text style={styles.textoTarea}>Chat</Text>
+                  </View>
+                </TouchableOpacity>
               </View>
             </View>
 
             <View style={styles.contieneFilaDos}>
               <View style={styles.containerLocaciones}>
-                <View style={styles.containerTextImgTarea}>
-                  <Image
-                    source={require('../../../assets/Img/tareas.png')}
-                    style={{ width: 70, height: 70, resizeMode: 'contain' }}
-                  />
-                  <Text style={styles.textoTarea}>Locaciones</Text>
-                </View>
+                <TouchableOpacity onPress={() => navigation.navigate('Mapa')}>
+                  <View style={styles.containerTextImgTarea}>
+                    <Image
+                      source={require('../../../assets/Img/tareas.png')}
+                      style={{ width: 70, height: 70, resizeMode: 'contain' }}
+                    />
+                    <Text style={styles.textoTarea}>Locaciones</Text>
+                  </View>
+                </TouchableOpacity>
               </View>
 
               <View style={styles.containerMas}>

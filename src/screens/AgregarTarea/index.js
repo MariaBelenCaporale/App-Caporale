@@ -47,13 +47,9 @@ const AgregarTarea = ({ navigation }) => {
           buttonTitle="Agregar"
           onChangeText={(text) => setText(text)}
           onHandlerButton={onAddEvent}
-          placeholder="Ingresar tarea"
+          placeholder="Agregar nueva tarea"
           value={text}
         />
-
-        <View>
-          <Button title="Ir a home" onPress={() => navigation.navigate('Home')} />
-        </View>
 
         <Events events={events} onSelectItem={onHandlerEvent} />
         <CustomModal
