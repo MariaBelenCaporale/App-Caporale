@@ -70,7 +70,7 @@ const Home = ({ navigation }) => {
 
             <View style={styles.contieneFilaDos}>
               <View style={styles.containerLocaciones}>
-                <TouchableOpacity onPress={() => navigation.navigate('Mapa')}>
+                <TouchableOpacity>
                   <View style={styles.containerTextImgTarea}>
                     <Image
                       source={require('../../../assets/Img/tareas.png')}

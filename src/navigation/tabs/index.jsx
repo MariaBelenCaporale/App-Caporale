@@ -3,7 +3,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import { theme } from '../../constants';
 import { Home } from '../../screens';
-import NewPlace from '../../screens/new-place';
 import AgregarTareaNavigator from '../AgregarTarea';
 
 const BottomTab = createBottomTabNavigator();
@@ -65,7 +64,6 @@ const TabsNavigator = () => {
           ),
         }}
       /> */}
-      <BottomTab.Screen name="Mapa" component={NewPlace} />
     </BottomTab.Navigator>
   );
 };

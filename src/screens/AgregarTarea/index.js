@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { View, TouchableWithoutFeedback, Keyboard, Button } from 'react-native';
+import { View, TouchableWithoutFeedback, Keyboard } from 'react-native';
 
 import { styles } from './styles';
-import { Events, Input, CustomModal, Header } from '../../components/index';
+import { Events, Input, CustomModal, HeaderImagen, MiBoton } from '../../components/index';
 import { theme } from '../../constants';
 
 const AgregarTarea = ({ navigation }) => {
@@ -41,7 +41,16 @@ const AgregarTarea = ({ navigation }) => {
   return (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <View style={styles.container}>
-        <Header title="Agregar tarea" />
+        <HeaderImagen
+          title="Agregar tarea"
+          source={require('../../../assets/Img/tareaColor.png')}
+          style={{
+            width: 120,
+            height: 120,
+            resizeMode: 'contain',
+          }}
+        />
+
         <Input
           buttonColor={theme.colors.rosa}
           buttonTitle="Agregar"
@@ -52,6 +61,7 @@ const AgregarTarea = ({ navigation }) => {
         />
 
         <Events events={events} onSelectItem={onHandlerEvent} />
+
         <CustomModal
           isVisible={modalVisible}
           animationType="slide"

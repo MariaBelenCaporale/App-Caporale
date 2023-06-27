@@ -8,7 +8,6 @@ import Bienvenida from '../../screens/Bienvenida';
 import PantallaAmigo from '../../screens/PantallaAmigo';
 import Registro from '../../screens/Registro';
 import Home from '../../screens/home';
-import NewPlace from '../../screens/new-place';
 import PantallaUno from '../../screens/pantallaUno';
 
 const Stack = createNativeStackNavigator();
@@ -24,7 +23,6 @@ const MainNavigator = () => {
         <Stack.Screen name="PantallaAmigo" component={PantallaAmigo} />
         <Stack.Screen name="Registro" component={Registro} />
         <Stack.Screen name="AgregarAmigo" component={AgregarAmigo} />
-        <Stack.Screen name="NewPlace" component={NewPlace} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -10,7 +10,7 @@ import {
 import { useDispatch } from 'react-redux';
 
 import { styles } from './styles';
-import { Header, InputForm } from '../../components/index';
+import { HeaderImagen, InputForm } from '../../components/index';
 import { theme } from '../../constants';
 import { signIn, signUp } from '../../redux/actions';
 import { onInputChange, UPDATED_FORM } from '../../utils/form';
@@ -67,7 +67,7 @@ const Registro = ({ navigation }) => {
   return (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <View style={styles.container}>
-        <Header title={title} text="Completá los datos" />
+        <HeaderImagen title={title} text="Completá los datos" />
         <View style={styles.inputContainer}>
           <InputForm
             placeholder="email@gmail.com"

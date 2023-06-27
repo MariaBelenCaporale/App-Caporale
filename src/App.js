@@ -3,10 +3,19 @@ import { View, ActivityIndicator, SafeAreaView } from 'react-native';
 import { Provider } from 'react-redux';
 
 import { theme } from './constants';
+import { init } from './db';
 import Navigator from './navigation';
 import redux from './redux';
 import { styles } from './styles';
 
+init()
+  .then(() => {
+    console.log('Initialized database');
+  })
+  .catch((err) => {
+    console.log('Initializing db failed.');
+    console.log(err);
+  });
 export default function App() {
   const [loaded] = useFonts({
     'Quicksand-Regular': require('../assets/Fonts/Quicksand-Regular.ttf'),

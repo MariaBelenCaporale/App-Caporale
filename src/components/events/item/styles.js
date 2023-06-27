@@ -8,24 +8,25 @@ export const styles = StyleSheet.create({
     height: 120,
     marginVertical: 10,
     justifyContent: 'flex-start',
-    backgroundColor: theme.colors.rosa,
+    backgroundColor: theme.colors.primary,
     alignItems: 'flex-start',
     borderRadius: 10,
 
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
-      height: 2,
+      height: 1,
     },
     shadowOpacity: 0.23,
-    shadowRadius: 2.62,
+    shadowRadius: 10,
 
     elevation: 4,
   },
   item: {
-    marginHorizontal: 10,
+    marginHorizontal: 20,
+    marginVertical: 20,
     color: theme.colors.black,
     fontSize: 25,
-    fontFamily: 'Quicksand-Regular',
+    fontFamily: 'Quicksand-Medium',
   },
 });
