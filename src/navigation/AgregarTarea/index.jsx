@@ -7,7 +7,7 @@ const Stack = createNativeStackNavigator();
 const AgregarTareaNavigator = ({ navigation }) => {
   return (
     <Stack.Navigator initialRouteName="AgregarTarea">
-      <Stack.Screen name="AgregarTarea" component={AgregarTarea} />
+      <Stack.Screen name="AgregarTarea" component={AgregarTarea} options={{ headerShown: false }} />
     </Stack.Navigator>
   );
 };

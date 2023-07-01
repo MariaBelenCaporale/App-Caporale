@@ -38,32 +38,17 @@ const TabsNavigator = () => {
           ),
         }}
       />
-      {/* <BottomTab.Screen
+
+      <BottomTab.Screen
         name="Tareas"
-        component={AgregarTarea}
+        component={AgregarTareaNavigator}
         options={{
           tabBarLabel: 'Tareas',
           tabBarIcon: ({ focused, color, size }) => (
-            <Ionicons name={focused ? 'bookmark' : 'bookmark-outline'} size={size} color={color} />
+            <Ionicons name={focused ? 'list' : 'list-outline'} size={size} color={color} />
           ),
         }}
-      /> */}
-      <BottomTab.Screen name="Tareas" component={AgregarTareaNavigator} />
-
-      {/* <BottomTab.Screen
-        name="Mapa"
-        component={NewPlace}
-        options={{
-          tabBarLabel: 'Mapa',
-          tabBarIcon: ({ focused, color, size }) => (
-            <Ionicons
-              name={focused ? 'chatbubble-ellipses' : 'chatbubble-ellipses-outline'}
-              size={size}
-              color={color}
-            />
-          ),
-        }}
-      /> */}
+      />
     </BottomTab.Navigator>
   );
 };

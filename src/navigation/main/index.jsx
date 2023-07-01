@@ -19,10 +19,7 @@ const MainNavigator = () => {
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="AgregarTarea" component={AgregarTarea} />
         <Stack.Screen name="Bienvenid@" component={Bienvenida} />
-        <Stack.Screen name="PantallaUno" component={PantallaUno} />
-        <Stack.Screen name="PantallaAmigo" component={PantallaAmigo} />
         <Stack.Screen name="Registro" component={Registro} />
-        <Stack.Screen name="AgregarAmigo" component={AgregarAmigo} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -25,52 +25,26 @@ const Home = ({ navigation }) => {
             </View>
             <View style={styles.containerTextosUsuario}>
               <Text style={styles.textoBienvenido}>Bienvenid@</Text>
-              <Text style={styles.textoDatos}>Usuario</Text>
+              <Text style={styles.textoDatos}>{}</Text>
             </View>
           </View>
 
-          <View style={styles.containerRanking}>
-            <TouchableOpacity onPress={() => navigation.navigate('Rankign')}>
-              <View style={styles.containerTextImg}>
-                <Text style={styles.textoRanking}>Ver ranking de quehaceres</Text>
-                <Image
-                  source={require('../../../assets/Img/ranking.png')}
-                  style={{ width: 70, height: 70, resizeMode: 'contain' }}
-                />
-              </View>
-            </TouchableOpacity>
-          </View>
-
           <View style={styles.containerCajas}>
-            <View style={styles.contieneFilaUno}>
-              <View style={styles.containerTarea}>
-                <TouchableOpacity onPress={() => navigation.navigate('Tareas')}>
-                  <View style={styles.containerTextImgTarea}>
-                    <Image
-                      source={require('../../../assets/Img/tareas.png')}
-                      style={{ width: 70, height: 70, resizeMode: 'contain' }}
-                    />
-                    <Text style={styles.textoTarea}>Nueva tarea</Text>
-                  </View>
-                </TouchableOpacity>
-              </View>
-
-              <View style={styles.containerChat}>
-                <TouchableOpacity onPress={() => navigation.navigate('Chat')}>
-                  <View style={styles.containerTextImgTarea}>
-                    <Image
-                      source={require('../../../assets/Img/tareas.png')}
-                      style={{ width: 70, height: 70, resizeMode: 'contain' }}
-                    />
-                    <Text style={styles.textoTarea}>Chat</Text>
-                  </View>
-                </TouchableOpacity>
-              </View>
+            <View style={styles.containerTarea}>
+              <TouchableOpacity onPress={() => navigation.navigate('Tareas')}>
+                <View style={styles.containerTextImgTarea}>
+                  <Image
+                    source={require('../../../assets/Img/tareas.png')}
+                    style={{ width: 60, height: 60, resizeMode: 'contain' }}
+                  />
+                  <Text style={styles.textoTarea}>Nueva tarea</Text>
+                </View>
+              </TouchableOpacity>
             </View>
 
             <View style={styles.contieneFilaDos}>
               <View style={styles.containerLocaciones}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Tareas')}>
                   <View style={styles.containerTextImgTarea}>
                     <Image
                       source={require('../../../assets/Img/tareas.png')}
@@ -79,16 +53,6 @@ const Home = ({ navigation }) => {
                     <Text style={styles.textoTarea}>Locaciones</Text>
                   </View>
                 </TouchableOpacity>
-              </View>
-
-              <View style={styles.containerMas}>
-                <View style={styles.containerTextImgTarea}>
-                  <Image
-                    source={require('../../../assets/Img/tareas.png')}
-                    style={{ width: 70, height: 70, resizeMode: 'contain' }}
-                  />
-                  <Text style={styles.textoTarea}>Algo más</Text>
-                </View>
               </View>
             </View>
           </View>
